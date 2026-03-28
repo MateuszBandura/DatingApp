@@ -1,0 +1,36 @@
+dotnet new list - gives a list of projects to create
+dotnet new webapi -h - docs obviously
+dotnet new sln - new project file (name of the current folder)
+dotnet new webapi -controllers --use-program-main -n API - created project
+dotnet sln add API - adds a project to the solution
+dotnet sln list
+
+if i use C# dev kit solution explorer ill get more info about classes and stuff
+
+API controllers are responsible for receiving HTTP requests and responding to them 
+
+I didnt use openapis
+
+Everything after builder.Build() is basically a middleware,
+
+dotnet dev-certs https -h
+dotnet dev-certs https --check - checks if u have valid dev certificate
+sudo dotnet dev-certs https --clean - gets rid of the certificate
+sudo dotnet dev-certs https --trust - makes a certificate
+
+props for entities should be public since entity framework is outside our project
+
+entity framework is an object relational mapper. It basically translates our code into SQL commmands that update our tables in the database
+when we add entity framework we need to make Dbcontext. Dbcontext basically acts as bridge between the domain/entity classes and database
+It represents a session with the database
+entity framework works with sql provider
+it provides querying, change tracking, saving, concurrency, transactions, caching, built-in conventions, configurations and migrations
+migrations are kinda like database schematics
+
+dotnet restore
+
+dotnet tool list -g
+dotnet tool install -g dotnet-ef - installs tool, in this case entity framework
+dotnet ef migrations -h 
+dotnet ef migrations add InitialCreate -o Data/Migrations
+dotnet ef database update
