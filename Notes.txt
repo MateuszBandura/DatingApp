@@ -51,3 +51,34 @@ in case for somereason u dont like that in case of http requests we subscribe to
 
 npm install tailwindcss @tailwindcss/postcss
 npm i -D daisyui@latest
+
+When you change any identity class you have to make new migration
+
+dotnet ef migrations add UserEntityUpdated
+
+if you already have migration in your project then u don't have to specify folder
+if ur object implements Idisposable you can use keyword using to ensure that that object is destroyed after method is completed(doesnt need to wait for garbage collector)
+apicontroller automaticly verfies information given to the controller
+DTO - Data Transfer Object 
+Use DTO's instead of passing strings in httppost for example
+required keyword doesn't prevent us from sending blank requests
+you can use [Required] dataanotation instead and also assign data some empty value
+
+dotnet ef database drop
+
+json webtoken industry standard for tokens sugested in some RFC 7519
+they are selfcontained and they contain credentials, claims and others
+they are basically a long string seperated in to 3 parts with dots
+first part is the header of the token, it contains algorithm and type of token(JWT)(the algorithm is used to encrypt the signature in the third part of the token)
+second part is the payload, this the place where we contain our claims and credentials
+we also have 3 time stamps in there, nbf sets the date and time before which token can not be used,
+exp sets the expiration date, iat sets when the token was issued at 
+third part conatins encrypted signature (its encrypted by the server with a secure key that never ever leaves the server)
+
+user sends credentials (login+password) -> server validates the credentials and returns JWT -> user then sends JWT with every single request to prove that hes authenticated -> server checks the JWT and sends back the response
+
+scoped lifetime is the one that is usually used for JWT creation service
+symmetric key is a key that is used both for encrypting and decrypting information
+
+its worth using extension methods to avoid repeating your self 
+to make an extension method you need to make your class statc
