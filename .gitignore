@@ -485,3 +485,5 @@ $RECYCLE.BIN/
 API/appsettings.json
 API/dating.db*
 Notes.txt
+
+.vscode
